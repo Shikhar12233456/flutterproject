@@ -1,5 +1,6 @@
-import 'package:first_flutter_project/screens/signup.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/Homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,15 +8,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
+  int days = 30;
+  String st = "Shikhar made you ";
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-          child: Center(
-        child: Container(
-          child: Text("welcome to screen"),
-        ),
-      )),
-      routes: {"/": (context) => signup()},
+      home: Homepage(),
     );
   }
 }
