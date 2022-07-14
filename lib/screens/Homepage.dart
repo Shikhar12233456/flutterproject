@@ -8,10 +8,8 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("First Flutter App"),
       ),
-      body: Center(
-        child: Container(
-          child: const Text("Hello Myself Shikhar: "),
-        ),
+      body: const Center(
+        child: Text("Hello Myself Shikhar: "),
       ),
       drawer: MyDrawer(),
     );
