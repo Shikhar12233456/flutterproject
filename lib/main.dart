@@ -1,5 +1,7 @@
 import 'package:first_flutter_project/screens/LoginPage.dart';
 import 'package:first_flutter_project/utils/routes.dart';
+import 'package:first_flutter_project/widgets/themes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/Homepage.dart';
@@ -15,9 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.blueGrey),
+      theme:  MyTheme.lightTheme,
+      darkTheme: MyTheme.darkTheme,
+      debugShowCheckedModeBanner: false,
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => Homepage(),
         Myroutes.homeRoute:(context) => Homepage(),
         Myroutes.loginRoute: (context) => LoginPage()
       },
